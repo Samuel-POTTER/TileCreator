@@ -17,33 +17,14 @@ setupProject () {
 
     if [ $OSTYPE == "msys" ] || [ $OSTYPE == "win32" ]
         then
-            until ./premake/Windows/premake5.exe vs2019; do
-                spin
-            done
-            endspin
+            ./premake/Windows/premake5.exe vs2019
     elif [ $OSTYPE == "darwin" ]
         then
-            until ./premake/Mac/premake5 gmake
-            ./premake/Mac/premake5 xcode4; do
-            spin
-            done
-            endspin
+            ./premake/Mac/premake5 gmake
+            ./premake/Mac/premake5 xcode4
     else
-        until ./premake/Linux/premake5 gmake; do
-            spin
-        done
-        endspin
+        ./premake/Linux/premake5 gmake
     fi
-}
-
-sp="/-\|"
-sc=0
-spin() {
-   printf "\b${sp:sc++:1}"
-   ((sc==${#sp})) && sc=0
-}
-endspin() {
-   printf "\r%s\n" "$@"
 }
 
 askInput() {
