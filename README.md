@@ -22,7 +22,12 @@ conan --version
 #if it's under 1.33 run
 pip install conan --upgrade
 ```
+Add conan remotes 
 
+```sh
+conan remote add conan-center https://conan.bintray.com
+conan remote add bincrafters https://api.bintray.com/conan/bincrafters/public-conan
+``` 
 After the installation of conan, create a `build` folder.
 
 ```sh
