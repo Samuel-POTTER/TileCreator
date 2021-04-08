@@ -1,0 +1,6 @@
+[requires]
+glfw/3.3@bincrafters/stable
+qt/6.0.3
+boost/1.75.0
+[generators]
+premake
