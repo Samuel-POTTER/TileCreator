@@ -8,7 +8,6 @@ cleanActualBuild() {
 }
 
 setupProject () {
-
     pip install conan --upgrade
     mkdir build
     cd build
@@ -17,12 +16,14 @@ setupProject () {
 
     if [ $OSTYPE == "msys" ] || [ $OSTYPE == "win32" ]
         then
+            chmod 777 premake/Windows/premake5.exe
             ./premake/Windows/premake5.exe vs2019
     elif [ $OSTYPE == "darwin" ]
         then
+            chmod 777 premake/Mac/premake5
             ./premake/Mac/premake5 gmake
-            ./premake/Mac/premake5 xcode4
     else
+        chmod 777 premake/Linux/premake5
         ./premake/Linux/premake5 gmake
     fi
 }
