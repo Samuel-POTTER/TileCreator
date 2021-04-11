@@ -1,6 +1,12 @@
 [requires]
 glfw/3.3@bincrafters/stable
-qt/6.0.3
+qt/6.0.1@bincrafters/stable
 boost/1.75.0
 [generators]
 premake
+
+[imports]
+bin, Qt6Core.dll -> ./bin
+bin, Qt6Gui.dll -> ./bin
+bin, Qt6Widgets.dll -> ./bin
+plugins/platforms, *.dll -> ./bin/plateforms

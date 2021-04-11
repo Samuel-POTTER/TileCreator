@@ -24,6 +24,13 @@ project "TileEditor"
 
     files
     {
-        "{%prj.name}/include/**.hpp",
-        "{%prj.name}/src/**.cpp" 
+        "**.h", "**.cpp" 
     }
+
+    configuration "windows"
+        postbuildcommands {
+            "{COPY} ../build/bin/Qt6Core.dll %{cfg.targetdir}",
+            "{COPY} ../build/bin/Qt6Gui.dll %{cfg.targetdir}",
+            "{COPY} ../build/bin/Qt6Widgets.dll %{cfg.targetdir}",
+            os.execute("mkdir %{cfg.targetdir}/platforms")
+        }
