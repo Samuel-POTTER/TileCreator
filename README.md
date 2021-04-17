@@ -11,10 +11,10 @@ Qt-powered.
 # BEFORE SETUP
 
 the `setup.sh` requires premake6 for user on mac or fedora. Windows premake is already inside the repo.
-For this, download the package from 
-**https://github.com/premake/premake-core**
+For this, download the package from
+**https://github.com/premake/premake-core/tree/v5.0.0-alpha16**
  After that, place the premake5 executable inside the folder of your OS.
- 
+
  ```bash
  premake/OS/
  ```
