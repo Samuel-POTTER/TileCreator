@@ -64,7 +64,7 @@ setupProject () {
 
 # askInput
 
-echo -e "Welcome to TileCreator setup."
+echo -e "TileCreator setup..."
 sleep 3
 cleanActualBuild
 setupProject
