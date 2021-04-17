@@ -24,10 +24,9 @@ project "TileEditor"
 
     files
     {
-        "**.h", "**.cpp" 
+        "**.h", "**.cpp"
     }
 
-    
     configuration "windows"
         cppdialect "C++17"
 

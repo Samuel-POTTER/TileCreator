@@ -4,3 +4,4 @@
 .vscode
 TileEditor
 *.sln
+.DS_Store
