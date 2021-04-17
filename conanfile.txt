@@ -9,4 +9,4 @@ premake
 bin, Qt6Core.dll -> ./bin
 bin, Qt6Gui.dll -> ./bin
 bin, Qt6Widgets.dll -> ./bin
-plugins/platforms, *.dll -> ./bin/plateforms
+plugins/platforms, *.dll -> ./bin/platforms
