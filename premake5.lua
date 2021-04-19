@@ -1,4 +1,7 @@
 include "build/conanbuildinfo.premake.lua"
+include "premake-qt/qt.lua"
+
+local qt = premake.extensions.qt
 
 workspace "TileEditor"
     conan_basic_setup()
@@ -16,6 +19,15 @@ project "TileEditor"
     location "TileEditor"
     kind "ConsoleApp"
     language "C++"
+
+    qt.enable()
+    qtpath("../build")
+    qtincludepath("../build/include")
+    qtlibpath("../build/lib")
+    qtbinpath("../build/bin")
+    qtprefix "Qt6"
+    qtmodules {"core", "gui", "opengl", "widgets"}
+    qtgenerateddir "src/include/window"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-obj/" .. outputdir .. "/%{prj.name}")
