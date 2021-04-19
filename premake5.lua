@@ -1,5 +1,5 @@
 include "build/conanbuildinfo.premake.lua"
-include "premake-qt/qt.lua"
+include "qt-premake/qt.lua"
 
 local qt = premake.extensions.qt
 

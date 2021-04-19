@@ -14,7 +14,6 @@ WindowUI::WindowUI() : QWidget()
 	_btn = new QPushButton("reset", this);
 	_btn->move(50, 20);
 	QObject::connect(_btn, SIGNAL(pressed()), _bar, SLOT(reset()));
-	QObject::connect(_btn, SIGNAL(pressed()), _slider, SLOT(resetSlider()));
 }
 
 WindowUI::WindowUI(int width, int height) : QWidget()
@@ -31,7 +30,6 @@ WindowUI::WindowUI(int width, int height) : QWidget()
 	_btn = new QPushButton("reset", this);
 	_btn->move(50, 40);
 	QObject::connect(_btn, SIGNAL(clicked()), _bar, SLOT(reset()));
-	QObject::connect(_btn, SIGNAL(pressed()), _slider, SLOT(resetSlider()));
 }
 
 WindowUI::~WindowUI()
