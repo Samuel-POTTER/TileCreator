@@ -3,7 +3,7 @@
 cleanActualBuild() {
     if [ -d "build" ]
         then
-            rm -rf build bin bin-obj TileEditor.sln TileEditor
+            rm -rf build bin bin-obj TileEditor*
     fi
 }
 
