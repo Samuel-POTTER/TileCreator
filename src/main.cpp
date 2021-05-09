@@ -4,7 +4,8 @@
 int main(int ac, char** av)
 {
 	QApplication app(ac, av);
-	WindowUI window(800, 600);
+	WindowUI window;
+	window.init();
 	window.show();
 	
 	return app.exec();
