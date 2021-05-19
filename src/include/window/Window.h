@@ -11,9 +11,11 @@
 #include <QtDebug>
 #include <QFile>
 #include <QTextStream>
+#include <QMenu>
 
 class WindowUI : public QWidget
 {
+	Q_OBJECT
 	enum class State {
 		Save = 0,
 		Export = 1,
@@ -33,6 +35,7 @@ private:
 	QSlider* _slider;
 	QPushButton* _btn;
 	QPushButton* _close;
+	QMenu* _menu;
 };
 
 #endif // !_WINDOW_H_

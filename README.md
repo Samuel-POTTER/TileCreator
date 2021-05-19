@@ -11,7 +11,7 @@ Qt-powered.
 ## Installation
 
 TileCreator provides a script which will setup the entire build for you.
-
+You will have to specify the absolute path of QT in the `premake.lua file`.
 ```sh
 chmod +x setup.sh
 ./setup.sh

@@ -3,7 +3,7 @@ include "qt-premake/qt.lua"
 
 local qt = premake.extensions.qt
 
-workspace "TileEditor"
+workspace "TileCreator"
     conan_basic_setup()
 
     configurations
@@ -15,20 +15,18 @@ workspace "TileEditor"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
-project "TileEditor"
-    location "TileEditor"
+project "TileCreator"
+    location "TileCreator"
     kind "ConsoleApp"
     language "C++"
 
     qt.enable()
-    qtpath("../build")
-    qtincludepath("../build/include")
-    qtlibpath("../build/lib")
-    qtbinpath("../build/bin")
+    qtpath("C:\\Qt\\6.0.3\\msvc2019_64")
+    qtincludepath("C:\\Qt\\6.0.3\\msvc2019_64\\include")
+    qtlibpath("C:\\Qt\\6.0.3\\msvc2019_64\\lib")
+    qtbinpath("C:\\Qt\\6.0.3\\msvc2019_64\\bin")
     qtprefix "Qt6"
     qtmodules {"core", "gui", "opengl", "widgets"}
-    qtgenerateddir "src/include/window"
-
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-obj/" .. outputdir .. "/%{prj.name}")
 
@@ -43,8 +41,8 @@ project "TileEditor"
         cppdialect "C++17"
 
         postbuildcommands {
-            "{COPY} ../build/bin/Qt6Core.dll %{cfg.targetdir}",
-            "{COPY} ../build/bin/Qt6Gui.dll %{cfg.targetdir}",
-            "{COPY} ../build/bin/Qt6Widgets.dll %{cfg.targetdir}",
-            "{COPYDIR} ../build/bin/ %{cfg.targetdir}"
+            "{COPY} ../file-link/Qt6Core.dll %{cfg.targetdir}",
+            "{COPY} ../file-link/Qt6Gui.dll %{cfg.targetdir}",
+            "{COPY} ../file-link/Qt6Widgets.dll %{cfg.targetdir}",
+            "{COPYDIR} ../file-link/ %{cfg.targetdir}"
         }

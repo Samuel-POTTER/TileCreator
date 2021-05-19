@@ -2,6 +2,7 @@
 /bin-obj
 /bin
 .vscode
-TileEditor
+TileCreator
 *.sln
 .DS_Store
+.vs/
